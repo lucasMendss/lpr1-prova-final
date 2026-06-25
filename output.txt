@@ -1,0 +1,33 @@
+===== DADOS DA CONSULTA =====
+Data: 20/08/26
+Hora: 15:30:00
+Paciente: JOÃO PAULO
+Medico: MARIA BORGES
+=============================
+Agendando nova consulta ==========
+Digite o nº do dia: 
+Digite o nº do mês: 
+Digite o nº do ano: 
+Digite o valor das horas: 
+Digite o valor dos minutos: 
+Digite o valor dos segundos: 
+Digite o nome do paciente: Digite o nome do médico: ===== DADOS DA CONSULTA =====
+Data: 15/04/26
+Hora: 07:05:00
+Paciente: LUCAS
+Medico: FELIPE BARRETTO
+=============================
+Digite o nº do dia: 
+Digite o nº do mês: 
+Digite o nº do ano: 
+Digite o valor das horas: 
+Digite o valor dos minutos: 
+Digite o valor dos segundos: 
+Digite o nome do paciente: Digite o nome do médico: ===== DADOS DA CONSULTA =====
+Data: 31/01/26
+Hora: 15:45:00
+Paciente: PEDRO BORGES
+Medico: MARINA SILVA
+=============================
+
+Total de consultas agendadas: 2

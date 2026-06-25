@@ -126,6 +126,27 @@ public class Data {
         } while(exigeBissexto && !ehBissexto(ano));
     }
 
+    public void setDia(int d) throws Exception {
+        if(!ehDataValida(d, mes, ano)) {
+            throw new Exception("Data inválida: " + d + "/" + mes + "/" + ano);
+        }
+        this.dia = d;
+    }
+
+    public void setMes(int m) throws Exception {
+        if(!ehDataValida(dia, m, ano)) {
+            throw new Exception("Data inválida: " + dia + "/" + m + "/" + ano);
+        }
+        this.mes = m;
+    }
+
+    public void setAno(int a) throws Exception {
+        if(!ehDataValida(dia, mes, a)) {
+            throw new Exception("Data inválida: " + dia + "/" + mes + "/" + a);
+        }
+        this.ano = a;
+    }
+
     public int getDia(){
         return dia;
     }
@@ -139,7 +160,7 @@ public class Data {
     }
 
     public String mostra1(){
-        return String.format("%02d/%02d/%02d", dia, mes, ano);
+        return String.format("%02d/%02d/%s", dia, mes, String.valueOf(ano).substring(2) );
     }
 
     public String mostra2(){

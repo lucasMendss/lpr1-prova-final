@@ -46,38 +46,31 @@ public class Hora {
         seg = lerEntrada("dos segundos", regexMinSeg);
     }
     
-    public Hora(int h, int m, int s){
+    public Hora(int h, int m, int s) throws Exception {
         this.setHor(h);
         this.setMin(m);
         this.setSeg(s);
     }
     
-    public void setHor(int hora) {
-        if (hora >= 0 && hora <= 23) {
-            this.hora = hora;
-        } else {
-            System.out.println("O valor de hora atribuído é inválido, então foi atribuído um valor válido aleatório automaticamente.");
-            this.hora = (int)(Math.random() * 24);
+    public void setHor(int hora) throws Exception {
+        if(hora < 0 || hora > 23) {
+            throw new Exception("Valor de horas inválido.");
         }
-        
+        this.hora = hora;
     }
 
-    public void setMin(int min) {
-        if (min >= 0 && min <= 59) {
-            this.min = min;
-        } else {
-            System.out.println("O valor de minutos atribuído é inválido, então foi atribuído um valor válido aleatório automaticamente.");
-            this.min = (int)(Math.random() * 60);
+    public void setMin(int min) throws Exception {
+        if(min < 0 || min > 59) {
+            throw new Exception("Valor de minutos inválido.");
         }
+        this.min = min;
     }
     
-    public void setSeg(int seg) {
-        if (seg >= 0 && seg <= 59) {
-            this.seg = seg;
-        } else {
-            System.out.println("O valor de segundos atribuído é inválido, então foi atribuído um valor válido aleatório automaticamente.");
-            this.seg = (int)(Math.random() * 60);
+    public void setSeg(int seg) throws Exception {
+        if(seg < 0 || seg > 59) {
+            throw new Exception("Valor de segundos inválido.");
         }
+        this.seg = seg;
     }
     
     public void setHor() {
