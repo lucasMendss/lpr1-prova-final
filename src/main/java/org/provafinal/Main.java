@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.io.ByteArrayOutputStream;
 
 /*
-IFSP CBT 2026 - ADS 371 - LPR1 Java - Trabalho Prático 04
+IFSP CBT 2026 - ADS 371 - LPR1 Java - Prova Final
 Professor Wellington Tuler Moraes
 
 Dupla:
@@ -16,11 +16,11 @@ Aluno: Lucas Rafael
 public class Main{
 
     public static void main(String[] args) throws Exception {
-        // Buffer para guardar cópia
+        // buffer para guardar cópia
         ByteArrayOutputStream copia = new ByteArrayOutputStream();
         PrintStream original = System.out;
 
-        // Cria PrintStream que escreve em DOIS lugares
+        // cria PrintStream que escreve em dois lugares
         System.setOut(new PrintStream(System.out) {
             public void write(byte[] buf, int off, int len) {
                 original.write(buf, off, len);  // escreve no terminal
@@ -41,7 +41,7 @@ public class Main{
         p1.exibirInfoConsulta();
         System.out.println("\nTotal de consultas agendadas: " + ConsultaAgendada.getQuantidade());
 
-        // Salva cópia no arquivo
+        // salva cópia no arquivo
         Files.write(Paths.get("output.txt"), copia.toByteArray());
     }
 }
